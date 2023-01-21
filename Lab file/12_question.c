@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // forward declarions
 void _printLine(int times);
@@ -16,7 +17,44 @@ void upperLowerSum();
 // main
 int main()
 {
-    upperLowerSum();
+    printf("Select any one from the following list: \n");
+    printf("\t1. Addition of two matrices.\n");
+    printf("\t2. Subtraction of two matrices.\n");
+    printf("\t3. Finding upper and lower triangular of matrix.\n");
+    printf("\t4. Transpose of matrix.\n");
+    printf("\t5. Product of two matrices.\n");
+
+    int choice;
+    while (1) 
+    {
+        fflush(stdin);
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+            case 1: 
+                add();
+                break;
+            case 2: 
+                subtract();
+                break;
+            case 3: 
+                upperLowerSum();
+                break;
+            case 4: 
+                transpose();
+                break;
+            case 5: 
+                product();
+                break;
+            default: 
+                printf("Invalid input provided! Please input again: \n");
+                continue;
+        }
+
+        break;
+    }
+
     return 0;
 }
 
@@ -176,7 +214,7 @@ void transpose()
 void upperLowerSum()
 {
     int r, c; 
-    printf("\nEnter order of matrix to find transpose of (format: rxc): ");
+    printf("\nEnter order of matrix (format: rxc): ");
     scanf("%dx%d", &r, &c);
 
     if (r != c)

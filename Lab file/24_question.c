@@ -1,26 +1,21 @@
 #include <stdio.h>
 
-void fibonacci(int prev, int curr, int n)
+int fib(int n)
 {
-    static int counter=1;
-    if (counter > n)
-        return;
-    
-    printf("%d ", curr);
-
-    int temp = prev;
-    prev = curr;
-    curr += temp;
-
-    counter++;
-    fibonacci(prev, curr, n);
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else 
+        return (fib(n-1) + fib(n-2));
 }
 
 void main()
 {
-    int n;
-    printf("Enter number of terms to print: ");
-    scanf("%d", &n);
+    int digits; 
+    printf("Enter number of digits to print: ");
+    scanf("%d", &digits);
 
-    fibonacci(0, 1, n);
+    for (int i=0; i<digits; i++)
+        printf("%d ", fib(i));    
 }

@@ -1,17 +1,13 @@
 #include <stdio.h>
 
-int reverse(int n)
+int reverse(int n, int reversed)
 {
-    int last_dig, sum = 0;
+    reversed = reversed*10 + (n%10);
 
-    while (n != 0)
-    {
-        last_dig = n % 10;
-        n /= 10;
-        sum = sum*10 + last_dig;
-    }
-
-    return sum;
+    if (n < 10)
+        return reversed;
+    else 
+        reverse(n/10, reversed);
 }
 
 void main()
@@ -20,6 +16,5 @@ void main()
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    int reversed = reverse(num);
-    printf("Reversed number: %d\n", reversed);
+    printf("Reversed number: %d", reverse(num, 0));    
 }

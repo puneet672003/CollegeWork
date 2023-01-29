@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 void copy(char from[], char to[])
-{
-    for (int i=0; from[i] != '\0'; i++)
+{   
+    int i;
+    for (i=0; from[i] != '\0'; i++)
     {
         to[i] = from[i];
     }
+
+    to[i+1] = '\0';
 }
 
 void main()

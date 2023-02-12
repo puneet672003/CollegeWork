@@ -1,6 +1,8 @@
 /*
-    42th Question = 39 QUESTION (according to google classroom)
-    DE HI NAI RKHA MA'AM NE LMAO...........
+    BRUH IDK..
 
-    kaam kam hogaya LG 😳
+    Idk ye sum() function konsa hai jisse file ki properties nikal ke ati...
+    Meine to ajtak suna nai iske bare mein NA google pe kuch dikha raha 💀
+
+    Kisi ko kuch pata chale to batana :')
 */

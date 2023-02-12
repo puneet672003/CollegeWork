@@ -1,3 +1,0 @@
-/*
-    I am to thak gaya :/ badmein dalunga ye wala...
-*/
